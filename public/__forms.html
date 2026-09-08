@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hidden Netlify Forms</title>
+  </head>
+  <body>
+    <!-- A static form strictly for Netlify's build bots to parse -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>
