@@ -2,49 +2,62 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
-import { Cpu } from "lucide-react";
+import { Cpu, ArrowDown } from "lucide-react";
 
 export function About() {
+  const timeline = [
+    "Electronics & Communication Engineering",
+    "Digital Electronics",
+    "Digital Hardware",
+    "RTL / Verilog",
+    "FPGA Design",
+    "Computer Arithmetic",
+    "VLSI & IC Design",
+    "Hardware Optimization",
+    "Research Experience"
+  ];
+
   return (
-    <section id="about" className="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto">
+    <section id="about" className="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-[var(--color-border)]">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         
-        {/* Left Stats Column */}
+        {/* Left Column: Timeline */}
         <div className="lg:col-span-4 flex flex-col gap-12">
           <div className="text-sm font-mono tracking-widest text-[var(--color-muted)] uppercase">
-            01 / ABOUT
+            MY JOURNEY
           </div>
           
-          <div className="flex flex-col gap-8">
-            {PORTFOLIO_DATA.stats.map((stat, index) => (
-              <div key={index} className="flex flex-col gap-1">
-                <span className="text-4xl md:text-5xl font-light tracking-tight text-[var(--foreground)]">
-                  {stat.value}
-                </span>
-                <span className="text-xs font-mono tracking-widest text-[var(--color-muted)] uppercase">
-                  {stat.label}
-                </span>
-              </div>
+          <div className="flex flex-col gap-4">
+            {timeline.map((step, index) => (
+              <React.Fragment key={index}>
+                <div className="text-sm md:text-base font-mono tracking-widest text-[var(--foreground)] uppercase border-l-2 border-[var(--color-border)] pl-4 hover:border-[var(--color-accent)] transition-colors py-1">
+                  {step}
+                </div>
+                {index < timeline.length - 1 && (
+                  <div className="pl-[23px] text-[var(--color-muted)] opacity-30 my-1">
+                    <ArrowDown size={14} />
+                  </div>
+                )}
+              </React.Fragment>
             ))}
           </div>
         </div>
 
         {/* Right Content Column */}
-        <div className="lg:col-span-8 flex flex-col gap-10 lg:pt-16">
+        <div className="lg:col-span-8 flex flex-col gap-10">
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight leading-[1.2] uppercase max-w-3xl">
             {PORTFOLIO_DATA.personal.aboutHeading}
           </h2>
           
-          <div className="text-lg md:text-xl text-[var(--color-muted)] font-light leading-relaxed max-w-2xl whitespace-pre-line">
+          <div className="text-lg md:text-xl text-[var(--color-muted)] font-light leading-relaxed max-w-3xl whitespace-pre-line">
             {PORTFOLIO_DATA.personal.aboutBody}
           </div>
 
-          {/* Technical Graphic Abstraction */}
-          <div className="mt-12 p-8 border border-[var(--color-border)] rounded-sm bg-[#fcfcfc] flex items-center justify-center relative overflow-hidden group">
-            <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#1a1a1a_1px,transparent_1px)] [background-size:16px_16px]" />
-            <div className="relative z-10 flex flex-col items-center gap-4 text-[var(--color-muted)] transition-transform duration-700 group-hover:scale-105">
-              <Cpu size={48} strokeWidth={1} />
-              <div className="font-mono text-xs tracking-widest uppercase">RTL Architecture Synthesis</div>
+          <div className="mt-12 p-10 border border-[var(--color-border)] bg-[var(--background)] flex items-center justify-center relative overflow-hidden group">
+            <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]" />
+            <div className="relative z-10 flex flex-col items-center gap-6 text-[var(--color-muted)] transition-transform duration-700 group-hover:scale-105">
+              <Cpu size={56} strokeWidth={1} className="text-[var(--foreground)]" />
+              <div className="font-mono text-sm tracking-widest uppercase text-[var(--foreground)]">Hardware Architecture & VLSI</div>
             </div>
             
             {/* Abstract routing lines */}

@@ -12,8 +12,25 @@
 }
 
 :root {
+  /* Light Theme Defaults */
+  --background: #f9fafb;
+  --foreground: #0f172a;
+  --color-background: #f9fafb;
+  --color-foreground: #0f172a;
+  --color-muted: #64748b; /* slate-500 */
+  --color-accent: #059669; /* emerald-600 */
+  --color-border: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='dark'] {
+  /* Dark Theme Variables */
   --background: #040404;
   --foreground: #ffffff;
+  --color-background: #040404;
+  --color-foreground: #ffffff;
+  --color-muted: #a1a1aa; /* zinc-400 */
+  --color-accent: #34d399; /* emerald-400 */
+  --color-border: rgba(255, 255, 255, 0.1);
 }
 
 body {

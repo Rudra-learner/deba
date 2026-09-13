@@ -1,156 +1,327 @@
 export const PORTFOLIO_DATA = {
   personal: {
     name: "DEBABRATA SAHU",
-    role: "ASPIRING VLSI & FPGA ENGINEER",
+    role: "Aspiring VLSI Researcher & Digital Hardware Designer",
     degree: "B.Tech in Electronics & Communication Engineering",
     university: "NIST University",
-    cgpa: "8.32/10",
-    email: "[YOUR EMAIL]",
-    linkedin: "[YOUR LINKEDIN]",
+    cgpa: "7.7/10",
+    email: "debabratasahu05112003@gmail.com",
+    linkedin: "https://www.linkedin.com/in/debabrata-sahu-05ad112003/",
     github: "[YOUR GITHUB]",
     resume: "/Resume.pdf",
-    shortBio: "I design digital hardware, explore RTL architectures and build FPGA and embedded systems.",
-    aboutHeading: "BUILDING HARDWARE FROM LOGIC TO IMPLEMENTATION.",
-    aboutBody: "I am an Electronics and Communication Engineering student with a strong interest in VLSI, FPGA, RTL design and digital hardware systems. I enjoy translating digital concepts into practical hardware architectures and exploring efficient implementations for arithmetic, AI and embedded applications.\n\nMy current focus is on strengthening my expertise in Verilog, SystemVerilog, RTL design and functional verification while building a foundation for a career in the semiconductor industry.",
+    shortBio: "I explore efficient digital hardware architectures through RTL design, FPGA implementation, and VLSI-oriented research.",
+    secondBio: "My work spans digital IC design, computer arithmetic, approximate computing, FPGA-based systems, and mixed-signal IC design.",
+    aboutHeading: "FROM ELECTRONICS TO VLSI",
+    aboutBody: "My interest in electronics began with understanding how digital systems transform fundamental logic into useful computation. During my undergraduate studies in Electronics & Communication Engineering, this interest gradually evolved toward digital hardware design, RTL architectures, FPGA implementation, and VLSI.\n\nI began exploring digital electronics and embedded systems before moving toward Verilog-based RTL design and FPGA implementation. As I worked on arithmetic architectures, I became particularly interested in the trade-offs between hardware complexity, performance, power, precision, and accuracy.\n\nThis led me to projects involving configurable floating-point FMA architectures, approximate multiplication, and mixed-signal IC design using Cadence. Alongside digital hardware, my research internship at NIT Jamshedpur introduced me to electromagnetic simulation and metamaterial-based sensing.\n\nThese experiences have shaped my goal of pursuing graduate study in VLSI, digital IC design, computer arithmetic, and hardware-efficient computing."
   },
   stats: [
-    { value: "8.32", label: "CGPA" },
-    { value: "05+", label: "FEATURED PROJECTS" },
-    { value: "01", label: "RESEARCH INTERNSHIP" },
-    { value: "RTL", label: "PRIMARY FOCUS" },
+    { value: "VLSI & FPGA", label: "Primary Technical Focus" },
+    { value: "Research + Internships", label: "Academic & Industry Exposure" },
+    { value: "B.Tech ECE", label: "NIST University" }
+  ],
+  researchInterests: [
+    {
+      title: "DIGITAL IC DESIGN",
+      description: "Design and implementation of efficient digital circuits and architectures for modern computing systems."
+    },
+    {
+      title: "VLSI & HARDWARE ARCHITECTURES",
+      description: "Exploring area-, performance-, and resource-efficient hardware architectures."
+    },
+    {
+      title: "COMPUTER ARITHMETIC",
+      description: "Interest in floating-point arithmetic, FMA architectures, arithmetic datapaths, and computational hardware."
+    },
+    {
+      title: "APPROXIMATE COMPUTING",
+      description: "Exploring the trade-offs between accuracy, area, power, and performance in approximate arithmetic circuits."
+    },
+    {
+      title: "FPGA-BASED COMPUTING",
+      description: "RTL implementation, FPGA synthesis, simulation, hardware evaluation, and architecture exploration."
+    },
+    {
+      title: "EDA & DESIGN METHODOLOGIES",
+      description: "Interest in RTL synthesis, optimization, verification, circuit simulation, and VLSI design methodologies."
+    }
   ],
   projects: [
     {
       id: "01",
-      title: "CONFIGURABLE FLOATING-POINT FMA",
-      category: "RTL DESIGN / FPGA / COMPUTER ARCHITECTURE",
-      description: "A configurable floating-point fused multiply-add architecture implemented in Verilog, exploring floating-point arithmetic, mixed-precision computation and efficient RTL implementation.",
-      technologies: ["Verilog HDL", "Xilinx Vivado", "XSim", "RTL Design", "Floating-Point Arithmetic"],
-      github: "[YOUR GITHUB REPO URL]",
+      title: "CONFIGURABLE FLOATING-POINT FMA UNIT",
+      subtitle: "Mixed-Precision Arithmetic Architecture",
+      category: "RTL DESIGN / FPGA / COMPUTER ARITHMETIC",
+      description: "Designed a configurable floating-point fused multiply-add (FMA) architecture supporting mixed-precision computation. The design was implemented using Verilog HDL and evaluated using Xilinx Vivado, with emphasis on arithmetic correctness, configurability, and hardware implementation.",
+      technologies: ["Verilog HDL", "Xilinx Vivado", "XSim", "RTL Design", "FPGA"],
+      focus: ["Floating-point arithmetic", "Mixed-precision computation", "RTL architecture", "FPGA implementation", "Hardware optimization"],
+      architecture: [
+        "Input Operands", "Floating-Point Processing", "Multiplication", "Exponent Alignment", "Addition", "Normalization", "Rounding", "Output"
+      ],
       details: {
-        problem: "Implementing efficient floating-point arithmetic in hardware is challenging due to the complexity of normalization, rounding, and delay. FMA reduces rounding errors by performing multiplication and addition in a single step.",
-        objective: "Design a configurable, efficient datapath for A × B + C operations supporting varying precisions.",
-        architecture: "Multiplier Stage -> Alignment Stage -> Adder Stage -> Normalization -> Rounding.",
-        results: "Result data to be added",
+        results: "Results to be added"
       }
     },
     {
       id: "02",
       title: "APPROXIMATE MULTIPLIER",
+      subtitle: "Hardware-Efficient Approximate Arithmetic",
       category: "VLSI / APPROXIMATE COMPUTING",
-      description: "An approximate multiplier architecture using inexact compressor structures, exploring the trade-off between computational accuracy, hardware complexity and performance.",
-      technologies: ["Verilog HDL", "RTL", "Digital VLSI", "Approximate Computing", "Compressor Architecture"],
-      github: "[YOUR GITHUB REPO URL]",
+      description: "Designed an approximate multiplier using approximate compressor structures to investigate the trade-off between arithmetic accuracy and hardware cost. The architecture was implemented using Verilog HDL and evaluated using FPGA-oriented simulation and synthesis.",
+      technologies: ["Verilog HDL", "Xilinx Vivado", "RTL Design", "FPGA"],
+      architecture: [
+        "Input A + Input B", "Partial Product Generation", "Approximate Compression", "Error Encoding", "Partial Product Reduction", "Final Product"
+      ],
+      evaluation: true,
       details: {
-        problem: "Exact multipliers consume significant power and area, which may be unnecessary in error-resilient applications like image processing or neural networks.",
-        objective: "Reduce hardware complexity by using inexact 4:2 and 5:2 compressors in the partial product reduction tree.",
-        architecture: "Partial Product Generation -> Approximate Reduction Tree -> Carry Propagate Adder.",
-        results: "Result data to be added",
+        results: "Results to be added"
       }
     },
     {
       id: "03",
-      title: "TERAHERTZ METAMATERIAL ABSORBER",
-      category: "RESEARCH / ELECTROMAGNETICS",
-      description: "A terahertz metamaterial absorber investigated for skin-cancer detection applications using electromagnetic simulation and absorption analysis.",
-      technologies: ["CST Studio Suite", "Metamaterials", "THz Simulation", "S-Parameters", "Absorption Analysis"],
+      title: "12-BIT DIGITAL-TO-ANALOG CONVERTER",
+      subtitle: "Cadence-Based Mixed-Signal IC Design",
+      category: "MIXED-SIGNAL IC DESIGN",
+      description: "Designed and simulated a 12-bit Digital-to-Analog Converter using Cadence, exploring mixed-signal circuit implementation and analog output behavior.",
+      technologies: ["Cadence Virtuoso", "Circuit Simulation", "Mixed-Signal IC Design"],
+      architecture: [
+        "Digital Input", "DAC Architecture", "Switching / Conversion Network", "Analog Output", "Circuit Simulation", "Performance Analysis"
+      ],
+      focus: ["12-bit DAC design", "Cadence Virtuoso", "Mixed-signal IC design", "Circuit simulation", "Analog output analysis"],
       details: {
-        problem: "Non-invasive early detection of skin cancer requires highly sensitive sensors at specific terahertz frequencies.",
-        objective: "Design a metamaterial absorber with a high Q-factor resonance that shifts distinctively when exposed to normal vs. cancerous tissue.",
-        architecture: "Multi-layer unit cell consisting of a metallic resonator, dielectric substrate, and metallic ground plane.",
-        results: "Result data to be added",
+        results: "Results to be added"
       }
     },
     {
       id: "04",
-      title: "IoT MINING WORKER SAFETY HELMET",
-      category: "EMBEDDED / IoT",
-      description: "An IoT-based safety monitoring system designed to monitor environmental and physiological parameters of mining workers and generate alerts under hazardous conditions.",
-      technologies: ["ESP32", "DHT11", "MQ-2", "Pulse Sensor", "LCD", "Blynk"],
-      github: "[YOUR GITHUB REPO URL]",
+      title: "TERAHERTZ METAMATERIAL ABSORBER-BASED SKIN CANCER DETECTION SYSTEM",
+      subtitle: "Research Project — Electromagnetic Sensing",
+      category: "RESEARCH / ELECTROMAGNETICS",
+      description: "Designed and investigated a terahertz metamaterial absorber for skin cancer detection applications. The structure was modeled and simulated using CST Studio Suite, followed by analysis of S-parameters, absorption characteristics, and resonance behavior for different tissue conditions.",
+      technologies: ["CST Studio Suite", "Electromagnetic Simulation", "S-Parameter Analysis", "Metamaterials"],
+      architecture: [
+        "Metamaterial Unit Cell", "CST Modeling", "Electromagnetic Simulation", "S-Parameters", "Absorption Characteristics", "Resonance Analysis", "Tissue Comparison"
+      ],
       details: {
-        problem: "Mining workers operate in hazardous environments where toxic gas leaks or physiological stress can be fatal.",
-        objective: "Develop a wearable helmet that continuously monitors air quality, temperature, and worker heart rate, pushing data to a cloud dashboard.",
-        architecture: "Sensors -> ESP32 -> Wi-Fi -> Blynk IoT Cloud -> Real-time Alerts.",
-        results: "Result data to be added",
+        results: "Results to be added"
       }
     },
     {
       id: "05",
-      title: "SMART AGRICULTURE MONITORING",
-      category: "EMBEDDED / IoT",
-      description: "A sensor-based agriculture monitoring system for tracking soil and environmental parameters to support smarter agricultural management.",
-      technologies: ["ESP32 / Arduino", "Sensors", "IoT"],
-      github: "[YOUR GITHUB REPO URL]",
+      title: "DECENTRALIZED NETWORKS",
+      category: "DECENTRALIZED SYSTEMS / NETWORKS",
+      description: "Explored the concepts and architecture of decentralized networks, focusing on distributed communication, peer-to-peer connectivity, and the principles of network decentralization.",
+      focus: ["Decentralized Systems", "Distributed Networks", "Peer-to-Peer Communication", "Network Architecture"],
       details: {
-        problem: "Inefficient water usage and lack of soil data lead to suboptimal crop yields.",
-        objective: "Create a deployed sensor node that logs soil moisture, temperature, and humidity for precise irrigation control.",
-        architecture: "Sensor Node -> Microcontroller -> Data Logging/Cloud.",
-        results: "Result data to be added",
+        results: "Results to be added"
       }
+    },
+    {
+      id: "06",
+      title: "IoT-BASED MINING WORKER SAFETY HELMET",
+      category: "EMBEDDED / IoT",
+      description: "Developed an IoT-enabled safety system designed to monitor environmental and worker-safety parameters in mining environments using sensors, microcontrollers, and cloud-based monitoring.",
+      technologies: ["Arduino / ESP32", "Sensors", "IoT", "ThingSpeak"],
+      details: {
+        results: "Results to be added"
+      }
+    },
+    {
+      id: "07",
+      title: "SMART AGRICULTURE MONITORING SYSTEM",
+      category: "EMBEDDED / IoT",
+      description: "Developed an IoT-based agricultural monitoring system for sensing environmental conditions and supporting data-driven monitoring of agricultural parameters.",
+      technologies: ["Arduino / ESP32", "Sensors", "IoT", "ThingSpeak"],
+      details: {
+        results: "Results to be added"
+      }
+    }
+  ],
+  experience: [
+    {
+      title: "RESEARCH INTERN — NIT JAMSHEDPUR",
+      project: "Terahertz Metamaterial Absorber-Based Skin Cancer Detection System",
+      date: "18 May 2026 – 18 June 2026",
+      description: "Completed a research internship at NIT Jamshedpur focused on the design and investigation of a terahertz metamaterial absorber for skin cancer detection applications.",
+      details: [
+        "Designed and modeled metamaterial structures.",
+        "Performed electromagnetic simulations using CST Studio Suite.",
+        "Analyzed S-parameters and absorption characteristics.",
+        "Investigated resonance-frequency behavior.",
+        "Studied the response of the absorber for different tissue conditions.",
+        "Explored metamaterial-based sensing for biomedical applications."
+      ]
+    },
+    {
+      title: "FACULTY DEVELOPMENT PROGRAM — FPGA-BASED COMMUNICATION SYSTEM DESIGN",
+      project: "FCSD-2026 | Electronics & ICT Academy, NIT Patna & NIT Jamshedpur",
+      date: "25 May 2026 – 5 June 2026",
+      description: "Completed the Faculty Development Program on “FPGA-Based Communication System Design (FCSD-2026)”, jointly organized by Electronics & ICT Academy, NIT Patna and NIT Jamshedpur under the Ministry of Electronics and Information Technology (MeitY), Government of India.",
+      details: [
+        "FPGA-based system design",
+        "Digital communication systems",
+        "Hardware implementation",
+        "FPGA architecture and development"
+      ]
+    },
+    {
+      title: "VLSI PROJECT-BASED INTERN — EDXCELLENCE",
+      project: "",
+      date: "20 January 2026 – 18 March 2026",
+      description: "Completed a project-based internship in Very-Large-Scale Integration (VLSI) with EdXcellence, an AICTE- and APSCHE-approved organization.",
+      details: [
+        "VLSI design concepts",
+        "Digital hardware design",
+        "RTL-based design",
+        "Project-oriented hardware implementation"
+      ]
+    },
+    {
+      title: "ELECTRONICS & TELECOMMUNICATION INTERN — CENTRAL COALFIELDS LIMITED",
+      project: "Smart Greenhouse Monitoring System | Ranchi, Jharkhand",
+      date: "01 June 2025 – 30 June 2025",
+      description: "Completed an internship in the Department of Electronics & Telecommunication (E&T) at Central Coalfields Limited, Ranchi, where I worked on a Smart Greenhouse Monitoring System.",
+      details: [
+        "Sensor interfacing",
+        "Environmental monitoring",
+        "Microcontroller-based systems",
+        "IoT-based monitoring",
+        "Hardware implementation and debugging"
+      ]
+    },
+    {
+      title: "MATLAB & ENGINEERING APPLICATIONS TRAINING",
+      project: "NIST University, Berhampur",
+      date: "12 July 2024 – 1 August 2024",
+      description: "Completed practical training in MATLAB and its applications in engineering, developing foundational skills in numerical computation, analysis, simulation, and engineering problem-solving.",
+      details: []
+    }
+  ],
+  education: [
+    {
+      degree: "B.TECH IN ELECTRONICS & COMMUNICATION ENGINEERING",
+      university: "NIST University, Berhampur, India",
+      date: "2023 – 2027",
+      cgpa: "CGPA: 7.7/10",
+      description: "Currently pursuing a Bachelor of Technology in Electronics & Communication Engineering, with an academic and project focus on digital electronics, RTL design, FPGA-based systems, VLSI, computer arithmetic, and hardware architectures.",
+      details: [
+        "Digital Electronics",
+        "VLSI Design",
+        "Microprocessors & Microcontrollers",
+        "Analog & Digital Communication",
+        "Computer Architecture",
+        "Embedded Systems",
+        "Signal Processing",
+        "Electronic Devices & Circuits"
+      ]
+    },
+    {
+      degree: "INTERMEDIATE — SCIENCE",
+      university: "Government Autonomous College, Rourkela, India",
+      date: "2020 – 2022",
+      cgpa: "70%",
+      description: "Completed higher secondary education in the Science stream, building a foundation in physics, chemistry, mathematics, and scientific problem-solving.",
+      details: []
+    },
+    {
+      degree: "MATRICULATION",
+      university: "Indo English School, Rourkela, India",
+      date: "Completed: 2020",
+      cgpa: "82.5%",
+      description: "Completed secondary education with a foundation in mathematics, science, and analytical learning.",
+      details: []
+    }
+  ],
+  courses: [
+    {
+      title: "FPGA-BASED COMMUNICATION SYSTEM DESIGN (FCSD-2026)",
+      organization: "Electronics & ICT Academy, NIT Patna & NIT Jamshedpur",
+      date: "25 May 2026 – 5 June 2026",
+      description: "Faculty Development Program focused on FPGA-based communication system design and hardware implementation."
+    },
+    {
+      title: "GETTING STARTED WITH ARTIFICIAL INTELLIGENCE",
+      organization: "IBM SkillsBuild",
+      date: "Issued: 27 February 2026",
+      description: "Completed foundational training covering fundamental concepts and applications of Artificial Intelligence."
+    },
+    {
+      title: "MATLAB AND ITS APPLICATIONS IN ENGINEERING",
+      organization: "NIST University, Berhampur",
+      date: "12 July 2024 – 1 August 2024",
+      description: "Completed practical training in MATLAB and its applications in engineering, including numerical analysis, simulation, and computational problem-solving."
     }
   ],
   skills: [
     {
-      group: "GROUP 01: HDL & RTL",
-      items: ["Verilog HDL", "SystemVerilog", "RTL Design", "FSM Design", "Digital Logic", "Arithmetic Circuits"]
+      group: "HDL & PROGRAMMING",
+      items: ["Verilog HDL", "C", "Python", "MATLAB", "8086 Assembly Language", "HTML"]
     },
     {
-      group: "GROUP 02: FPGA",
-      items: ["Xilinx Vivado", "XSim", "FPGA Architecture", "LUT", "BRAM", "DSP Slices", "RTL Simulation"]
+      group: "VLSI, EDA & SIMULATION",
+      items: ["Cadence Virtuoso", "Xilinx Vivado", "EDA Playground", "TCAD"]
     },
     {
-      group: "GROUP 03: VERIFICATION",
-      items: ["Functional Verification", "Testbench Development", "Waveform Debugging", "SystemVerilog Assertions — Learning", "UVM — Learning"]
+      group: "DIGITAL HARDWARE DESIGN",
+      items: ["Digital VLSI Design", "RTL Design", "RTL Verification", "Computer Arithmetic", "Digital Logic Design", "Hardware Architecture"]
     },
     {
-      group: "GROUP 04: EMBEDDED",
-      items: ["ESP32", "Arduino", "Sensors", "IoT", "Blynk", "Wokwi"]
+      group: "EMBEDDED SYSTEMS & IoT",
+      items: ["Embedded Systems", "Arduino", "ESP32", "Microcontrollers", "Sensor Interfacing", "IoT", "Hardware Debugging"]
     },
     {
-      group: "GROUP 05: RESEARCH & SIMULATION",
-      items: ["CST Studio Suite", "Metamaterial Design", "THz Simulation", "Electromagnetic Analysis"]
+      group: "DEVELOPMENT TOOLS",
+      items: ["VS Code", "Arduino IDE", "Code Composer Studio", "ThingSpeak"]
     },
     {
-      group: "GROUP 06: PROGRAMMING",
-      items: ["C", "Python"]
+      group: "MACHINE LEARNING",
+      items: ["Basic Machine Learning", "Python-based ML"]
     }
   ],
-  experience: {
-    title: "RESEARCH INTERNSHIP",
-    company: "NIT Jamshedpur",
-    project: "Skin Cancer Detection Absorber Using Terahertz Frequency",
-    details: [
-      "Metamaterial absorber design",
-      "Unit-cell modeling",
-      "THz electromagnetic simulation",
-      "S-parameter analysis",
-      "Absorption analysis",
-      "Resonance frequency analysis",
-      "Q-factor evaluation",
-      "Normal vs cancerous tissue response"
-    ]
-  },
-  education: {
-    degree: "B.Tech in Electronics & Communication Engineering",
-    university: "NIST University",
-    cgpa: "8.32/10",
-    startYear: "[START YEAR]",
-    endYear: "[EXPECTED GRADUATION YEAR]"
-  },
-  achievements: [
-    "8.32 CGPA",
-    "TCS Ninja Selection / Offer",
-    "Research Internship — NIT Jamshedpur",
-    "Multiple Hardware / RTL / FPGA Projects"
-  ],
   careerPath: [
-    "VERILOG",
-    "SYSTEMVERILOG",
-    "RTL DESIGN",
-    "FUNCTIONAL VERIFICATION",
-    "SVA",
-    "UVM",
-    "ASIC / FPGA DESIGN"
+    "VLSI & DIGITAL HARDWARE",
+    "Digital IC Design",
+    "Computer Arithmetic",
+    "Hardware Architectures",
+    "Approximate Computing",
+    "FPGA Computing",
+    "EDA & Optimization"
+  ],
+  careerPathDesc: "My undergraduate projects have progressively moved from digital logic and embedded systems toward RTL architectures, arithmetic hardware, FPGA implementation, and VLSI-oriented design.\n\nThrough projects such as the configurable floating-point FMA, approximate multiplier, and 12-bit DAC, I have developed an interest in understanding how hardware architectures can be designed for improved performance, reduced resource utilization, and efficient computation.\n\nMy research internship in terahertz metamaterial-based sensing further introduced me to simulation-driven research, technical analysis, and structured problem-solving.\n\nI now aim to deepen this foundation through graduate study, with particular interest in VLSI, digital IC design, computer arithmetic, approximate computing, FPGA-based hardware, and EDA methodologies.",
+  extracurricular: [
+    {
+      title: "NBC — NIST BASKETBALL CLUB",
+      role: "Player",
+      institution: "NIST University, Berhampur",
+      date: "11 October 2023 – Present",
+      description: "Active basketball player representing the university club.",
+      details: [
+        "Participating in team practices, matches, and university-level sporting activities.",
+        "Developing teamwork, discipline, communication, coordination, and time-management skills through competitive sports."
+      ]
+    },
+    {
+      title: "RENEWABLE ENERGY CLUB",
+      role: "Event Head · Social Media Head",
+      institution: "NIST University, Berhampur",
+      date: "September 2024 – Present",
+      description: "",
+      details: [
+        "Coordinating and supporting the planning and execution of club events and activities.",
+        "Managing social media communication and promoting club initiatives.",
+        "Collaborating with students and team members on technical and awareness activities."
+      ]
+    },
+    {
+      title: "INNOVATION & INCUBATION CLUB",
+      role: "Core Member",
+      institution: "NIST University, Berhampur",
+      date: "November 2025 – Present",
+      description: "",
+      details: [
+        "Participating in innovation-focused activities, technical events, and student initiatives.",
+        "Collaborating with peers on technology and innovation-oriented activities.",
+        "Contributing to activities that encourage problem-solving and an innovation-oriented mindset."
+      ]
+    }
   ]
 };

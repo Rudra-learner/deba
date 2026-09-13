@@ -4,15 +4,16 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Hero } from "@/components/ui/Hero";
 import { Marquee } from "@/components/ui/Marquee";
 import { About } from "@/components/ui/About";
+import { ResearchInterests } from "@/components/ui/ResearchInterests";
 import { Projects } from "@/components/ui/Projects";
 import { Skills } from "@/components/ui/Skills";
 import { Experience } from "@/components/ui/Experience";
 import { Education } from "@/components/ui/Education";
-import { CareerPath } from "@/components/ui/CareerPath";
+import { Courses } from "@/components/ui/Courses";
+import { Extracurricular } from "@/components/ui/Extracurricular";
 import { Contact } from "@/components/ui/Contact";
 import { Footer } from "@/components/ui/Footer";
 import { BootLoader } from "@/components/ui/BootLoader";
-import { Dock } from "@/components/ui/Dock";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { motion } from "framer-motion";
 
@@ -23,7 +24,10 @@ export default function Home() {
     <>
       {!booted && <BootLoader onComplete={() => setBooted(true)} />}
       
-      <div className="pointer-events-none fixed inset-[-50%] z-0 opacity-[0.03] mix-blend-overlay noise-bg"></div>
+      {/* Global CAD / Drafting Grid Background */}
+      <div className="pointer-events-none fixed inset-0 z-0 opacity-20 bg-[linear-gradient(var(--color-border)_1px,transparent_1px),linear-gradient(90deg,var(--color-border)_1px,transparent_1px)] bg-[size:40px_40px]" />
+      
+      <div className="pointer-events-none fixed inset-[-50%] z-0 opacity-[0.03] mix-blend-overlay noise-bg" />
       <CustomCursor />
       <Navbar />
 
@@ -36,16 +40,18 @@ export default function Home() {
         <Hero />
         <Marquee />
         <About />
+        <ResearchInterests />
         <Projects />
-        <Skills />
         <Experience />
         <Education />
-        <CareerPath />
+        <Courses />
+        <Skills />
+        <Extracurricular />
         <Contact />
         <Footer />
       </motion.main>
 
-      {booted && <Dock />}
+
     </>
   );
 }

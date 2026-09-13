@@ -15,14 +15,16 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "[YOUR NAME] | VLSI & FPGA Engineer",
-  description: "Portfolio of [YOUR NAME], an Electronics & Communication Engineering student focused on VLSI, RTL design, FPGA, digital hardware and embedded systems.",
+  title: "Debabrata Sahu | VLSI & Digital Hardware Research Portfolio",
+  description: "Portfolio of Debabrata Sahu, an Electronics & Communication Engineering student exploring VLSI, digital IC design, RTL, FPGA, computer arithmetic, approximate computing, and hardware research.",
   openGraph: {
-    title: "[YOUR NAME] | VLSI & FPGA Engineer",
-    description: "Portfolio of [YOUR NAME], an Electronics & Communication Engineering student focused on VLSI, RTL design, FPGA, digital hardware and embedded systems.",
+    title: "Debabrata Sahu | VLSI & Digital Hardware Research Portfolio",
+    description: "Portfolio of Debabrata Sahu, an Electronics & Communication Engineering student exploring VLSI, digital IC design, RTL, FPGA, computer arithmetic, approximate computing, and hardware research.",
     type: "website",
   },
 };
+
+import { ThemeProvider } from 'next-themes';
 
 export default function RootLayout({
   children,
@@ -30,11 +32,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${robotoMono.variable} font-sans antialiased bg-[var(--background)] text-[var(--foreground)]`}
       >
-        {children}
+        <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

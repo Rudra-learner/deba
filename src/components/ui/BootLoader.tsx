@@ -25,7 +25,7 @@ export function BootLoader({ onComplete }: { onComplete: () => void }) {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8 }}
-      className="fixed inset-0 z-[99999] flex flex-col justify-between bg-[#040404] text-white select-none overflow-hidden font-mono p-6 md:p-12"
+      className="fixed inset-0 z-[99999] flex flex-col justify-between bg-[var(--background)] text-[var(--foreground)] select-none overflow-hidden font-mono p-6 md:p-12"
     >
       <div className="flex justify-between items-center text-[10px] text-zinc-600 tracking-widest uppercase">
         <span>SAHU_OS // V.1.0</span>
@@ -42,7 +42,7 @@ export function BootLoader({ onComplete }: { onComplete: () => void }) {
         </div>
         <div className="flex-1 h-[1px] bg-zinc-800 relative overflow-hidden">
           <motion.div 
-            className="absolute top-0 bottom-0 left-0 bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]"
+            className="absolute top-0 bottom-0 left-0 bg-[var(--foreground)] shadow-[0_0_10px_var(--color-border)]"
             initial={{ width: 0 }}
             animate={{ width: `${Math.min(progress, 100)}%` }}
             transition={{ ease: "linear", duration: 0.2 }}

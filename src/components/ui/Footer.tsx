@@ -13,14 +13,14 @@ export function Footer() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
         
         <div className="flex flex-col gap-4">
-          <div className="text-xl font-medium tracking-tight">
+          <div className="text-xl font-medium tracking-tight uppercase">
             {PORTFOLIO_DATA.personal.name}
           </div>
           <div className="text-xs font-mono tracking-widest text-[var(--color-muted)] uppercase">
-            VLSI • RTL • FPGA • EMBEDDED
+            VLSI • DIGITAL HARDWARE • FPGA • RESEARCH
           </div>
           <div className="text-sm text-[var(--color-muted)] font-light mt-4">
-            © 2026 {PORTFOLIO_DATA.personal.name}. All rights reserved.
+            © 2026 {PORTFOLIO_DATA.personal.name}
           </div>
         </div>
 
@@ -34,9 +34,6 @@ export function Footer() {
           </button>
           
           <div className="flex flex-wrap gap-6 md:gap-8">
-            <a href={PORTFOLIO_DATA.personal.github} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--foreground)] hover:text-[var(--color-accent)] transition-colors">
-              GitHub
-            </a>
             <a href={PORTFOLIO_DATA.personal.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--foreground)] hover:text-[var(--color-accent)] transition-colors">
               LinkedIn
             </a>
