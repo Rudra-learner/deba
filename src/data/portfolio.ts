@@ -51,7 +51,7 @@ export const PORTFOLIO_DATA = {
       title: "CONFIGURABLE FLOATING-POINT FMA UNIT",
       subtitle: "Mixed-Precision Arithmetic Architecture",
       category: "RTL DESIGN / FPGA / COMPUTER ARITHMETIC",
-      image: "/projects/configurable-floating-point-fma-unit.jpg",
+      image: "/projects/fma-unit.jpeg",
       description: "Designed a configurable floating-point fused multiply-add (FMA) architecture supporting mixed-precision computation. The design was implemented using Verilog HDL and evaluated using Xilinx Vivado, with emphasis on arithmetic correctness, configurability, and hardware implementation.",
       technologies: ["Verilog HDL", "Xilinx Vivado", "XSim", "RTL Design", "FPGA"],
       focus: ["Floating-point arithmetic", "Mixed-precision computation", "RTL architecture", "FPGA implementation", "Hardware optimization"],
@@ -99,7 +99,7 @@ export const PORTFOLIO_DATA = {
       title: "TERAHERTZ METAMATERIAL ABSORBER-BASED SKIN CANCER DETECTION SYSTEM",
       subtitle: "Research Project — Electromagnetic Sensing",
       category: "RESEARCH / ELECTROMAGNETICS",
-      image: "/projects/terahertz-metamaterial-absorber.jpg",
+      image: "/projects/terahertz.jpeg",
       description: "Designed and investigated a terahertz metamaterial absorber for skin cancer detection applications. The structure was modeled and simulated using CST Studio Suite, followed by analysis of S-parameters, absorption characteristics, and resonance behavior for different tissue conditions.",
       technologies: ["CST Studio Suite", "Electromagnetic Simulation", "S-Parameter Analysis", "Metamaterials"],
       architecture: [
