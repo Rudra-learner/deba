@@ -11,9 +11,6 @@ export function Contact() {
         {/* CV Section */}
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
-            <h2 className="text-sm font-mono tracking-widest text-[var(--color-muted)] uppercase mb-2">
-              CURRICULUM VITAE
-            </h2>
             <h3 className="text-2xl md:text-4xl font-medium tracking-tight uppercase leading-[1.2] text-[var(--foreground)]">
               WANT TO KNOW MORE ABOUT MY WORK?
             </h3>
@@ -35,9 +32,6 @@ export function Contact() {
         {/* Contact Section */}
         <div className="flex flex-col gap-8 md:border-l border-[var(--color-border)] md:pl-16">
           <div className="flex flex-col gap-2">
-            <h2 className="text-sm font-mono tracking-widest text-[var(--color-muted)] uppercase mb-2">
-              CONTACT
-            </h2>
             <h3 className="text-2xl md:text-4xl font-medium tracking-tight uppercase leading-[1.2] text-[var(--foreground)]">
               LET&apos;S CONNECT
             </h3>

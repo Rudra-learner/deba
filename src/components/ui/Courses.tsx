@@ -10,9 +10,6 @@ export function Courses() {
   return (
     <section id="courses" className="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-[var(--color-border)]">
       <div className="mb-16 md:mb-24">
-        <h2 className="text-sm font-mono tracking-widest text-[var(--color-muted)] uppercase mb-4">
-          CONTINUOUS LEARNING
-        </h2>
         <h3 className="text-3xl md:text-5xl font-medium tracking-tight uppercase leading-[1.2]">
           COURSES & TRAINING
         </h3>
