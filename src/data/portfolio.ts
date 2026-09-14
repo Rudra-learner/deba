@@ -67,7 +67,7 @@ export const PORTFOLIO_DATA = {
       title: "APPROXIMATE MULTIPLIER",
       subtitle: "Hardware-Efficient Approximate Arithmetic",
       category: "VLSI / APPROXIMATE COMPUTING",
-      image: "/projects/approximate-multiplier.jpg",
+      image: "/projects/approximatemultiplier.png",
       description: "Designed an approximate multiplier using approximate compressor structures to investigate the trade-off between arithmetic accuracy and hardware cost. The architecture was implemented using Verilog HDL and evaluated using FPGA-oriented simulation and synthesis.",
       technologies: ["Verilog HDL", "Xilinx Vivado", "RTL Design", "FPGA"],
       architecture: [
@@ -113,7 +113,7 @@ export const PORTFOLIO_DATA = {
       id: "05",
       title: "DECENTRALIZED NETWORKS",
       category: "DECENTRALIZED SYSTEMS / NETWORKS",
-      image: "/projects/decentralized-networks.jpg",
+      image: "/projects/decentralized.png",
       description: "Explored the concepts and architecture of decentralized networks, focusing on distributed communication, peer-to-peer connectivity, and the principles of network decentralization.",
       focus: ["Decentralized Systems", "Distributed Networks", "Peer-to-Peer Communication", "Network Architecture"],
       details: {
@@ -124,7 +124,7 @@ export const PORTFOLIO_DATA = {
       id: "06",
       title: "IoT-BASED MINING WORKER SAFETY HELMET",
       category: "EMBEDDED / IoT",
-      image: "/projects/iot-based-mining-worker-safety-helmet.jpg",
+      image: "/projects/smartmining.png",
       description: "Developed an IoT-enabled safety system designed to monitor environmental and worker-safety parameters in mining environments using sensors, microcontrollers, and cloud-based monitoring.",
       technologies: ["Arduino / ESP32", "Sensors", "IoT", "ThingSpeak"],
       details: {
@@ -135,7 +135,7 @@ export const PORTFOLIO_DATA = {
       id: "07",
       title: "SMART AGRICULTURE MONITORING SYSTEM",
       category: "EMBEDDED / IoT",
-      image: "/projects/smart-agriculture-monitoring-system.jpg",
+      image: "/projects/smartgreenhouse.png",
       description: "Developed an IoT-based agricultural monitoring system for sensing environmental conditions and supporting data-driven monitoring of agricultural parameters.",
       technologies: ["Arduino / ESP32", "Sensors", "IoT", "ThingSpeak"],
       details: {
