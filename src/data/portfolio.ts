@@ -83,7 +83,7 @@ export const PORTFOLIO_DATA = {
       title: "12-BIT DIGITAL-TO-ANALOG CONVERTER",
       subtitle: "Cadence-Based Mixed-Signal IC Design",
       category: "MIXED-SIGNAL IC DESIGN",
-      image: "/projects/12-bit-digital-to-analog-converter.jpg",
+      image: "/projects/12bitdigitaltoanalogconverter.jpeg",
       description: "Designed and simulated a 12-bit Digital-to-Analog Converter using Cadence, exploring mixed-signal circuit implementation and analog output behavior.",
       technologies: ["Cadence Virtuoso", "Circuit Simulation", "Mixed-Signal IC Design"],
       architecture: [
