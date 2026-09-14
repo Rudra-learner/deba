@@ -87,11 +87,30 @@ export function Projects() {
             onClick={() => !dragMoved && setSelectedProject(project)}
             className="w-[320px] md:w-[400px] flex-shrink-0 group flex flex-col border border-[var(--color-border)] bg-[var(--background)] p-6 hover:border-[var(--color-accent)] transition-all select-none"
           >
-            <div className="w-full aspect-[4/3] bg-[var(--foreground)]/5 border border-[var(--color-border)]/50 relative overflow-hidden mb-6 flex items-center justify-center flex-shrink-0">
-              <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:12px_12px] pointer-events-none" />
-              <span className="text-xs font-mono text-[var(--color-muted)] uppercase tracking-widest pointer-events-none">
-                [ Photo ]
-              </span>
+            <div className="w-full aspect-[4/3] bg-[var(--foreground)]/5 border border-[var(--color-border)]/50 relative overflow-hidden mb-6 flex items-center justify-center flex-shrink-0 group-hover:border-[var(--color-accent)] transition-colors">
+              {project.image ? (
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity pointer-events-none"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = 'none';
+                    if (e.currentTarget.nextElementSibling) {
+                      (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'flex';
+                    }
+                  }}
+                />
+              ) : null}
+              
+              <div 
+                className={`absolute inset-0 flex flex-col items-center justify-center ${project.image ? 'hidden' : 'flex'}`}
+                style={{ zIndex: project.image ? -1 : 1 }}
+              >
+                <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:12px_12px] pointer-events-none" />
+                <span className="text-xs font-mono text-[var(--color-muted)] uppercase tracking-widest pointer-events-none relative z-10">
+                  [ Photo ]
+                </span>
+              </div>
             </div>
             
             <div className="flex flex-col gap-2 flex-grow">
@@ -150,12 +169,31 @@ export function Projects() {
                   )}
                 </div>
 
-                {/* Photo placeholder in modal */}
+                {/* Photo in modal */}
                 <div className="w-full aspect-[21/9] bg-[var(--foreground)]/5 border border-[var(--color-border)] relative flex flex-col items-center justify-center overflow-hidden">
-                  <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]" />
-                  <span className="relative z-10 text-sm font-mono tracking-widest text-[var(--color-muted)] uppercase">
-                    [ Photo placeholder for {selectedProject.title} ]
-                  </span>
+                  {selectedProject.image ? (
+                    <img 
+                      src={selectedProject.image} 
+                      alt={selectedProject.title} 
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                        if (e.currentTarget.nextElementSibling) {
+                          (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'flex';
+                        }
+                      }}
+                    />
+                  ) : null}
+                  
+                  <div 
+                    className={`absolute inset-0 flex flex-col items-center justify-center ${selectedProject.image ? 'hidden' : 'flex'}`}
+                    style={{ zIndex: selectedProject.image ? -1 : 1 }}
+                  >
+                    <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]" />
+                    <span className="relative z-10 text-sm font-mono tracking-widest text-[var(--color-muted)] uppercase">
+                      [ Photo placeholder for {selectedProject.title} ]
+                    </span>
+                  </div>
                 </div>
 
                 <p className="text-lg text-[var(--color-muted)] font-light leading-relaxed">
