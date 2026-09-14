@@ -43,9 +43,9 @@ export default function Home() {
         <ResearchInterests />
         <Projects />
         <Experience />
-        <Education />
-        <Courses />
         <Skills />
+        <Courses />
+        <Education />
         <Extracurricular />
         <Contact />
         <Footer />

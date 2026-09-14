@@ -51,9 +51,6 @@ export function Experience() {
     <section id="experience" className="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-[var(--color-border)] relative">
       <div className="mb-12 max-w-4xl flex items-end justify-between">
         <div>
-          <h2 className="text-sm font-mono tracking-widest text-[var(--color-muted)] uppercase mb-4">
-            ACADEMIC & INDUSTRY EXPOSURE
-          </h2>
           <h3 className="text-3xl md:text-5xl font-medium tracking-tight uppercase leading-[1.2]">
             RESEARCH & INTERNSHIP EXPERIENCE
           </h3>
