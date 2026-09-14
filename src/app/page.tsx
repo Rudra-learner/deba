@@ -24,9 +24,13 @@ export default function Home() {
     <>
       {!booted && <BootLoader onComplete={() => setBooted(true)} />}
       
-      {/* Global CAD / Drafting Grid Background */}
-      <div className="pointer-events-none fixed inset-0 z-0 opacity-20 bg-[linear-gradient(var(--color-border)_1px,transparent_1px),linear-gradient(90deg,var(--color-border)_1px,transparent_1px)] bg-[size:40px_40px]" />
+      {/* Global Circuit Background Image */}
+      <div 
+        className="pointer-events-none fixed inset-0 z-0 opacity-[0.15] bg-cover bg-center bg-no-repeat mix-blend-luminosity"
+        style={{ backgroundImage: 'url("/circuit-bg.jpg")' }}
+      />
       
+      {/* Noise Overlay */}
       <div className="pointer-events-none fixed inset-[-50%] z-0 opacity-[0.03] mix-blend-overlay noise-bg" />
       <CustomCursor />
       <Navbar />
