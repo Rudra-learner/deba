@@ -51,7 +51,7 @@ export const PORTFOLIO_DATA = {
       title: "CONFIGURABLE FLOATING-POINT FMA UNIT",
       subtitle: "Mixed-Precision Arithmetic Architecture",
       category: "RTL DESIGN / FPGA / COMPUTER ARITHMETIC",
-      image: "/projects/fma-unit.jpeg",
+      image: "/projects/fma-unit.jpeg?v=2",
       description: "Designed a configurable floating-point fused multiply-add (FMA) architecture supporting mixed-precision computation. The design was implemented using Verilog HDL and evaluated using Xilinx Vivado, with emphasis on arithmetic correctness, configurability, and hardware implementation.",
       technologies: ["Verilog HDL", "Xilinx Vivado", "XSim", "RTL Design", "FPGA"],
       focus: ["Floating-point arithmetic", "Mixed-precision computation", "RTL architecture", "FPGA implementation", "Hardware optimization"],
@@ -67,7 +67,7 @@ export const PORTFOLIO_DATA = {
       title: "APPROXIMATE MULTIPLIER",
       subtitle: "Hardware-Efficient Approximate Arithmetic",
       category: "VLSI / APPROXIMATE COMPUTING",
-      image: "/projects/approximatemultiplier.png",
+      image: "/projects/approximatemultiplier.png?v=2",
       description: "Designed an approximate multiplier using approximate compressor structures to investigate the trade-off between arithmetic accuracy and hardware cost. The architecture was implemented using Verilog HDL and evaluated using FPGA-oriented simulation and synthesis.",
       technologies: ["Verilog HDL", "Xilinx Vivado", "RTL Design", "FPGA"],
       architecture: [
@@ -83,7 +83,7 @@ export const PORTFOLIO_DATA = {
       title: "12-bit Analog-to-Digital Converter",
       subtitle: "Cadence-Based Mixed-Signal IC Design",
       category: "MIXED-SIGNAL IC DESIGN",
-      image: "/projects/12bitdigitaltoanalogconverter.jpeg",
+      image: "/projects/12bitdigitaltoanalogconverter.jpeg?v=2",
       description: "Designed and simulated a 12-bit Analog-to-Digital Converter using Cadence, exploring mixed-signal circuit implementation and digital output behavior.",
       technologies: ["Cadence Virtuoso", "Circuit Simulation", "Mixed-Signal IC Design"],
       architecture: [
@@ -99,7 +99,7 @@ export const PORTFOLIO_DATA = {
       title: "TERAHERTZ METAMATERIAL ABSORBER-BASED SKIN CANCER DETECTION SYSTEM",
       subtitle: "Research Project — Electromagnetic Sensing",
       category: "RESEARCH / ELECTROMAGNETICS",
-      image: "/projects/terahertz.jpeg",
+      image: "/projects/terahertz.jpeg?v=2",
       description: "Designed and investigated a terahertz metamaterial absorber for skin cancer detection applications. The structure was modeled and simulated using CST Studio Suite, followed by analysis of S-parameters, absorption characteristics, and resonance behavior for different tissue conditions.",
       technologies: ["CST Studio Suite", "Electromagnetic Simulation", "S-Parameter Analysis", "Metamaterials"],
       architecture: [
@@ -113,7 +113,7 @@ export const PORTFOLIO_DATA = {
       id: "05",
       title: "DECENTRALIZED NETWORKS",
       category: "DECENTRALIZED SYSTEMS / NETWORKS",
-      image: "/projects/decentralized.png",
+      image: "/projects/decentralized.png?v=2",
       description: "Explored the concepts and architecture of decentralized networks, focusing on distributed communication, peer-to-peer connectivity, and the principles of network decentralization.",
       focus: ["Decentralized Systems", "Distributed Networks", "Peer-to-Peer Communication", "Network Architecture"],
 
@@ -124,7 +124,7 @@ export const PORTFOLIO_DATA = {
       id: "06",
       title: "IoT-BASED MINING WORKER SAFETY HELMET",
       category: "EMBEDDED / IoT",
-      image: "/projects/smartmining.png",
+      image: "/projects/smartmining.png?v=2",
       description: "Developed an IoT-enabled safety system designed to monitor environmental and worker-safety parameters in mining environments using sensors, microcontrollers, and cloud-based monitoring.",
       technologies: ["Arduino / ESP32", "Sensors", "IoT", "ThingSpeak"],
 
@@ -135,7 +135,7 @@ export const PORTFOLIO_DATA = {
       id: "07",
       title: "SMART AGRICULTURE MONITORING SYSTEM",
       category: "EMBEDDED / IoT",
-      image: "/projects/smartgreenhouse.png",
+      image: "/projects/smartgreenhouse.png?v=2",
       description: "Developed an IoT-based agricultural monitoring system for sensing environmental conditions and supporting data-driven monitoring of agricultural parameters.",
       technologies: ["Arduino / ESP32", "Sensors", "IoT", "ThingSpeak"],
 
@@ -148,7 +148,7 @@ export const PORTFOLIO_DATA = {
       title: "RESEARCH INTERN — NIT JAMSHEDPUR",
       project: "Terahertz Metamaterial Absorber-Based Skin Cancer Detection System",
       date: "18 May 2026 – 18 June 2026",
-      image: "/experience/nit-jamshedpur.jpg",
+      image: "/experience/nit-jamshedpur.jpg?v=2",
       description: "Completed a research internship at NIT Jamshedpur focused on the design and investigation of a terahertz metamaterial absorber for skin cancer detection applications.",
       details: [
         "Designed and modeled metamaterial structures.",
@@ -163,7 +163,7 @@ export const PORTFOLIO_DATA = {
       title: "FACULTY DEVELOPMENT PROGRAM — FPGA-BASED COMMUNICATION SYSTEM DESIGN",
       project: "FCSD-2026 | Electronics & ICT Academy, NIT Patna & NIT Jamshedpur",
       date: "25 May 2026 – 5 June 2026",
-      image: "/experience/fcsd-2026.jpg",
+      image: "/experience/fcsd-2026.jpg?v=2",
       description: "Completed the Faculty Development Program on “FPGA-Based Communication System Design (FCSD-2026)”, jointly organized by Electronics & ICT Academy, NIT Patna and NIT Jamshedpur under the Ministry of Electronics and Information Technology (MeitY), Government of India.",
       details: [
         "FPGA-based system design",
@@ -176,7 +176,7 @@ export const PORTFOLIO_DATA = {
       title: "VLSI PROJECT-BASED INTERN — EDXCELLENCE",
       project: "",
       date: "20 January 2026 – 18 March 2026",
-      image: "/experience/edxcellence-vlsi.jpg",
+      image: "/experience/edxcellence-vlsi.jpg?v=2",
       description: "Completed a project-based internship in Very-Large-Scale Integration (VLSI) with EdXcellence, an AICTE- and APSCHE-approved organization.",
       details: [
         "VLSI design concepts",
@@ -189,7 +189,7 @@ export const PORTFOLIO_DATA = {
       title: "ELECTRONICS & TELECOMMUNICATION INTERN — CENTRAL COALFIELDS LIMITED",
       project: "Smart Greenhouse Monitoring System | Ranchi, Jharkhand",
       date: "01 June 2025 – 30 June 2025",
-      image: "/experience/central-coalfields.jpg",
+      image: "/experience/central-coalfields.jpg?v=2",
       description: "Completed an internship in the Department of Electronics & Telecommunication (E&T) at Central Coalfields Limited, Ranchi, where I worked on a Smart Greenhouse Monitoring System.",
       details: [
         "Sensor interfacing",
@@ -203,7 +203,7 @@ export const PORTFOLIO_DATA = {
       title: "MATLAB & ENGINEERING APPLICATIONS TRAINING",
       project: "NIST University, Berhampur",
       date: "12 July 2024 – 1 August 2024",
-      image: "/experience/matlab-training.jpg",
+      image: "/experience/matlab-training.jpg?v=2",
       description: "Completed practical training in MATLAB and its applications in engineering, developing foundational skills in numerical computation, analysis, simulation, and engineering problem-solving.",
       details: []
     }
