@@ -1,51 +1,11 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronRight, ChevronLeft } from "lucide-react";
 
 export function Experience() {
-  type ExperienceType = typeof PORTFOLIO_DATA.experience[0];
-  const [selectedExp, setSelectedExp] = useState<ExperienceType | null>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  
-  // Drag to scroll state
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const [dragMoved, setDragMoved] = useState(false);
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = direction === 'left' ? -400 : 400;
-      scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!scrollContainerRef.current) return;
-    setIsDragging(true);
-    setDragMoved(false);
-    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
-    setScrollLeft(scrollContainerRef.current.scrollLeft);
-  };
-
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !scrollContainerRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    if (Math.abs(walk) > 10) setDragMoved(true);
-    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-  };
+  const [selectedIdx, setSelectedIdx] = useState<number>(0);
+  const selectedExp = PORTFOLIO_DATA.experience[selectedIdx];
 
   return (
     <section id="experience" className="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-[var(--color-border)] relative">
@@ -55,111 +15,82 @@ export function Experience() {
             RESEARCH & INTERNSHIP EXPERIENCE
           </h3>
         </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start mt-16">
         
-        {/* Navigation Buttons for horizontal scroll */}
-        <div className="hidden md:flex gap-4">
-          <button onClick={() => scroll('left')} className="p-3 border border-[var(--color-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors rounded-full">
-            <ChevronLeft size={20} />
-          </button>
-          <button onClick={() => scroll('right')} className="p-3 border border-[var(--color-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors rounded-full">
-            <ChevronRight size={20} />
-          </button>
-        </div>
-      </div>
-
-      {/* Horizontal scrolling container */}
-      <div 
-        ref={scrollContainerRef}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        className={`flex overflow-x-auto gap-8 pb-12 hide-scrollbar relative items-stretch ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-      >
-        {PORTFOLIO_DATA.experience.map((exp, idx) => (
-          <motion.div 
-            key={idx} 
-            whileHover={{ y: -10 }}
-            onClick={() => !dragMoved && setSelectedExp(exp)}
-            className="w-[320px] md:w-[400px] flex-shrink-0 group flex flex-col border border-[var(--color-border)] bg-[var(--background)] p-8 hover:border-[var(--color-accent)] transition-all select-none"
-          >
-            <div className="flex flex-col gap-4 flex-grow">
-              <span className="text-xs font-mono tracking-widest text-[var(--color-accent)] uppercase pointer-events-none">
-                {exp.date}
-              </span>
-              <h4 className="text-xl md:text-2xl font-medium tracking-tight uppercase leading-[1.2] text-[var(--foreground)] group-hover:text-[var(--color-accent)] transition-colors pointer-events-none line-clamp-3">
-                {exp.title}
-              </h4>
-              {exp.project && (
-                <div className="text-sm font-mono text-[var(--color-muted)] pointer-events-none line-clamp-2">
-                  {exp.project}
-                </div>
-              )}
-              <p className="text-sm text-[var(--color-muted)] font-light leading-relaxed pointer-events-none line-clamp-3 mt-2">
-                {exp.description}
-              </p>
-            </div>
-            
-            <div className="mt-8 text-sm font-mono tracking-widest uppercase border-t border-[var(--color-border)] pt-4 text-[var(--color-muted)] group-hover:text-[var(--foreground)] transition-colors flex justify-between items-center pointer-events-none">
-              <span>View Details</span>
-              <ChevronRight size={16} />
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Modal for details */}
-      <AnimatePresence>
-        {selectedExp && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/80 backdrop-blur-sm"
-            onClick={() => setSelectedExp(null)}
-          >
-            <motion.div 
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 50, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-              className="bg-[var(--background)] border border-[var(--color-border)] p-6 md:p-12 max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
+        {/* Left Side: Timeline List */}
+        <div className="lg:w-2/5 flex flex-col relative w-full border-l border-[var(--color-border)]">
+          {PORTFOLIO_DATA.experience.map((exp, idx) => (
+            <div 
+              key={idx} 
+              onClick={() => setSelectedIdx(idx)}
+              className={`relative pl-8 py-8 cursor-pointer group transition-all border-b border-[var(--color-border)] last:border-0 ${
+                selectedIdx === idx ? 'bg-[var(--foreground)]/5' : 'hover:bg-[var(--foreground)]/5 hover:pl-10'
+              }`}
             >
-              <button 
-                onClick={() => setSelectedExp(null)}
-                className="absolute top-6 right-6 p-2 hover:bg-[var(--foreground)]/10 transition-colors rounded-full"
-              >
-                <X size={24} />
-              </button>
+              {/* Timeline active dot */}
+              <div className={`absolute left-[-5px] top-1/2 -translate-y-1/2 w-[9px] h-[9px] rounded-full transition-all duration-300 ${
+                selectedIdx === idx ? 'bg-[var(--color-accent)] scale-125 shadow-[0_0_10px_var(--color-accent)]' : 'bg-[var(--color-border)] group-hover:bg-[var(--foreground)] group-hover:scale-110'
+              }`} />
+              
+              <div className="flex flex-col gap-1">
+                <span className={`text-xs font-mono tracking-widest uppercase transition-colors ${
+                  selectedIdx === idx ? 'text-[var(--color-accent)]' : 'text-[var(--color-muted)] group-hover:text-[var(--foreground)]'
+                }`}>
+                  {exp.date}
+                </span>
+                <h4 className={`text-lg md:text-xl font-medium tracking-tight uppercase leading-[1.2] transition-colors ${
+                  selectedIdx === idx ? 'text-[var(--foreground)]' : 'text-[var(--color-muted)] group-hover:text-[var(--foreground)]'
+                }`}>
+                  {exp.title}
+                </h4>
+              </div>
+            </div>
+          ))}
+        </div>
 
-              <div className="flex flex-col gap-8 pr-12">
+        {/* Right Side: Details Box (Sticky) */}
+        <div className="lg:w-3/5 w-full lg:sticky lg:top-32">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedIdx}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="border border-[var(--color-border)] bg-[var(--background)] p-8 md:p-12 relative shadow-2xl"
+            >
+              {/* Top Accent line */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-[var(--color-accent)] opacity-50" />
+              
+              <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-2">
                   <span className="text-xs font-mono tracking-widest text-[var(--color-accent)] uppercase">
                     {selectedExp.date}
                   </span>
-                  <h4 className="text-3xl md:text-4xl font-medium tracking-tight uppercase leading-[1.1] text-[var(--foreground)]">
+                  <h4 className="text-2xl md:text-4xl font-medium tracking-tight uppercase leading-[1.1] text-[var(--foreground)]">
                     {selectedExp.title}
                   </h4>
                   {selectedExp.project && (
-                    <h5 className="text-lg text-[var(--foreground)] font-mono uppercase mt-2">
+                    <h5 className="text-base md:text-lg text-[var(--foreground)] font-mono uppercase mt-2">
                       {selectedExp.project}
                     </h5>
                   )}
                 </div>
 
-                <p className="text-lg text-[var(--color-muted)] font-light leading-relaxed">
+                <p className="text-base md:text-lg text-[var(--color-muted)] font-light leading-relaxed">
                   {selectedExp.description}
                 </p>
 
                 {selectedExp.details && selectedExp.details.length > 0 && (
-                  <div className="flex flex-col gap-3 mt-4 border-t border-[var(--color-border)] pt-4">
+                  <div className="flex flex-col gap-4 mt-2 border-t border-[var(--color-border)] pt-6">
                     <span className="text-xs font-mono tracking-widest text-[var(--foreground)] uppercase">Experience Highlights</span>
-                    <ul className="flex flex-col gap-2">
+                    <ul className="flex flex-col gap-3">
                       {selectedExp.details.map((detail, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-muted)] mt-2 flex-shrink-0" />
-                          <span className="text-base text-[var(--color-muted)]">{detail}</span>
+                        <li key={i} className="flex items-start gap-4">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]/80 mt-2 flex-shrink-0" />
+                          <span className="text-sm md:text-base text-[var(--color-muted)] font-light leading-relaxed">{detail}</span>
                         </li>
                       ))}
                     </ul>
@@ -167,14 +98,9 @@ export function Experience() {
                 )}
               </div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <style dangerouslySetInnerHTML={{__html: `
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-      `}} />
+          </AnimatePresence>
+        </div>
+      </div>
     </section>
   );
 }
