@@ -237,16 +237,6 @@ export function Projects() {
                   </div>
                 )}
 
-                {selectedProject.details && (
-                  <div className="flex flex-col gap-3 mt-4 border-t border-[var(--color-border)] pt-4">
-                    <span className="text-xs font-mono tracking-widest text-[var(--foreground)] uppercase">Additional Details</span>
-                    <p className="text-sm text-[var(--color-muted)] font-light leading-relaxed">
-                      {typeof selectedProject.details.results === "string" 
-                        ? selectedProject.details.results 
-                        : JSON.stringify(selectedProject.details.results)}
-                    </p>
-                  </div>
-                )}
               </div>
             </motion.div>
           </motion.div>

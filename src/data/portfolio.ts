@@ -58,9 +58,9 @@ export const PORTFOLIO_DATA = {
       architecture: [
         "Input Operands", "Floating-Point Processing", "Multiplication", "Exponent Alignment", "Addition", "Normalization", "Rounding", "Output"
       ],
-      details: {
-        results: "Results to be added"
-      }
+
+
+
     },
     {
       id: "02",
@@ -74,9 +74,9 @@ export const PORTFOLIO_DATA = {
         "Input A + Input B", "Partial Product Generation", "Approximate Compression", "Error Encoding", "Partial Product Reduction", "Final Product"
       ],
       evaluation: true,
-      details: {
-        results: "Results to be added"
-      }
+
+
+
     },
     {
       id: "03",
@@ -90,9 +90,9 @@ export const PORTFOLIO_DATA = {
         "Digital Input", "DAC Architecture", "Switching / Conversion Network", "Analog Output", "Circuit Simulation", "Performance Analysis"
       ],
       focus: ["12-bit DAC design", "Cadence Virtuoso", "Mixed-signal IC design", "Circuit simulation", "Analog output analysis"],
-      details: {
-        results: "Results to be added"
-      }
+
+
+
     },
     {
       id: "04",
@@ -105,9 +105,9 @@ export const PORTFOLIO_DATA = {
       architecture: [
         "Metamaterial Unit Cell", "CST Modeling", "Electromagnetic Simulation", "S-Parameters", "Absorption Characteristics", "Resonance Analysis", "Tissue Comparison"
       ],
-      details: {
-        results: "Results to be added"
-      }
+
+
+
     },
     {
       id: "05",
@@ -116,9 +116,9 @@ export const PORTFOLIO_DATA = {
       image: "/projects/decentralized.png",
       description: "Explored the concepts and architecture of decentralized networks, focusing on distributed communication, peer-to-peer connectivity, and the principles of network decentralization.",
       focus: ["Decentralized Systems", "Distributed Networks", "Peer-to-Peer Communication", "Network Architecture"],
-      details: {
-        results: "Results to be added"
-      }
+
+
+
     },
     {
       id: "06",
@@ -127,9 +127,9 @@ export const PORTFOLIO_DATA = {
       image: "/projects/smartmining.png",
       description: "Developed an IoT-enabled safety system designed to monitor environmental and worker-safety parameters in mining environments using sensors, microcontrollers, and cloud-based monitoring.",
       technologies: ["Arduino / ESP32", "Sensors", "IoT", "ThingSpeak"],
-      details: {
-        results: "Results to be added"
-      }
+
+
+
     },
     {
       id: "07",
@@ -138,9 +138,9 @@ export const PORTFOLIO_DATA = {
       image: "/projects/smartgreenhouse.png",
       description: "Developed an IoT-based agricultural monitoring system for sensing environmental conditions and supporting data-driven monitoring of agricultural parameters.",
       technologies: ["Arduino / ESP32", "Sensors", "IoT", "ThingSpeak"],
-      details: {
-        results: "Results to be added"
-      }
+
+
+
     }
   ],
   experience: [
