@@ -15,16 +15,17 @@ export function About() {
           {PORTFOLIO_DATA.personal.aboutBody}
         </div>
 
-        <div className="mt-12 p-10 border border-[var(--color-border)] bg-[var(--background)] flex items-center justify-center relative overflow-hidden group">
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]" />
-          <div className="relative z-10 flex flex-col items-center gap-6 text-[var(--color-muted)] transition-transform duration-700 group-hover:scale-105">
-            <Cpu size={56} strokeWidth={1} className="text-[var(--foreground)]" />
-            <div className="font-mono text-sm tracking-widest uppercase text-[var(--foreground)]">Hardware Architecture & VLSI</div>
+        <div className="mt-12 border border-[var(--color-border)] bg-[var(--background)] relative overflow-hidden group aspect-video max-h-[400px]">
+          <img 
+            src="/about-hardware.jpg" 
+            alt="Hardware Architecture & VLSI"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute bottom-6 left-6 right-6 z-10 flex items-center gap-3">
+            <Cpu size={24} className="text-[var(--color-accent)]" />
+            <div className="font-mono text-sm tracking-widest uppercase text-white drop-shadow-md">Hardware Architecture & VLSI</div>
           </div>
-          
-          {/* Abstract routing lines */}
-          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-[var(--color-border)] -translate-y-1/2" />
-          <div className="absolute left-1/2 top-0 w-[1px] h-full bg-[var(--color-border)] -translate-x-1/2" />
         </div>
       </div>
     </section>
