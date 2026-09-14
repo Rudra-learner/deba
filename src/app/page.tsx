@@ -26,8 +26,8 @@ export default function Home() {
       
       {/* Global Circuit Background Image */}
       <div 
-        className="pointer-events-none fixed inset-0 z-0 opacity-[0.15] bg-cover bg-center bg-no-repeat mix-blend-luminosity"
-        style={{ backgroundImage: 'url("/circuit-bg.jpg")' }}
+        className="pointer-events-none fixed inset-0 z-0 opacity-[0.25] bg-cover bg-center bg-no-repeat mix-blend-screen"
+        style={{ backgroundImage: 'url("/clean-circuit-bg.jpg")' }}
       />
       
       {/* Noise Overlay */}
