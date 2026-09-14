@@ -11,7 +11,7 @@ export const PORTFOLIO_DATA = {
     resume: "/Resume.pdf",
     shortBio: "I explore efficient digital hardware architectures through RTL design, FPGA implementation, and VLSI-oriented research.",
     secondBio: "My work spans digital IC design, computer arithmetic, approximate computing, FPGA-based systems, and mixed-signal IC design.",
-    aboutHeading: "FROM ELECTRONICS TO VLSI",
+    aboutHeading: "ABOUT ME",
     aboutBody: "My interest in electronics began with fundamental logic and quickly evolved toward digital hardware design, RTL architectures, FPGA implementation, and VLSI.\n\nI explore Verilog-based RTL design, arithmetic architectures, and the trade-offs between hardware complexity, performance, and precision. This has led me to projects involving floating-point FMA architectures, approximate computing, and mixed-signal IC design.\n\nUltimately, my goal is to pursue graduate study in VLSI, digital IC design, and hardware-efficient computing."
   },
   stats: [
