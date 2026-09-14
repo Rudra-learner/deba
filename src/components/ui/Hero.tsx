@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { ArrowDownRight, FileDown } from "lucide-react";
 
+import Image from "next/image";
+
 // Glitch Effect Component
 const GlitchName = ({ text }: { text: string }) => {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -121,11 +123,13 @@ export function Hero() {
               </div>
               
               <div className="relative w-full h-full overflow-hidden bg-[var(--foreground)]/5">
-                <img 
+                <Image 
                   src="/photo.png" 
                   alt="Debabrata Sahu" 
-                  className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 scale-105 group-hover:scale-100 transition-all duration-700" 
+                  fill
+                  className="object-cover grayscale-[20%] group-hover:grayscale-0 scale-105 group-hover:scale-100 transition-all duration-700" 
                 />
+                
                 
                 {/* Overlay & Scanline */}
                 <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] pointer-events-none" />

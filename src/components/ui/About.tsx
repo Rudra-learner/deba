@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
-import { Cpu, ArrowDown } from "lucide-react";
+import { Cpu } from "lucide-react";
 
 export function About() {
   const timeline = [
@@ -21,24 +20,20 @@ export function About() {
     <section id="about" className="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-[var(--color-border)]">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         
-        {/* Left Column: Timeline */}
-        <div className="lg:col-span-4 flex flex-col gap-12">
+        {/* Left Column: Timeline (Now Horizontal) */}
+        <div className="lg:col-span-4 flex flex-col gap-6">
           <div className="text-sm font-mono tracking-widest text-[var(--color-muted)] uppercase">
             MY JOURNEY
           </div>
           
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-wrap gap-2">
             {timeline.map((step, index) => (
-              <React.Fragment key={index}>
-                <div className="text-sm md:text-base font-mono tracking-widest text-[var(--foreground)] uppercase border-l-2 border-[var(--color-border)] pl-4 hover:border-[var(--color-accent)] transition-colors py-1">
-                  {step}
-                </div>
-                {index < timeline.length - 1 && (
-                  <div className="pl-[23px] text-[var(--color-muted)] opacity-30 my-1">
-                    <ArrowDown size={14} />
-                  </div>
-                )}
-              </React.Fragment>
+              <div 
+                key={index} 
+                className="text-xs md:text-sm font-mono tracking-widest text-[var(--foreground)] uppercase border border-[var(--color-border)] px-3 py-1.5 rounded-full hover:border-[var(--color-accent)] transition-colors"
+              >
+                {step}
+              </div>
             ))}
           </div>
         </div>

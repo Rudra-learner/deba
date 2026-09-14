@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
-import { ArrowDown } from "lucide-react";
 
 export function CareerPath() {
   return (

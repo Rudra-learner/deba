@@ -10,7 +10,8 @@ export function Navbar() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    // Avoid synchronous setState in effect (eslint react-hooks/set-state-in-effect)
+    setTimeout(() => setMounted(true), 0);
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

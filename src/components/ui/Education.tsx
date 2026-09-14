@@ -14,41 +14,42 @@ export function Education() {
         </h3>
       </div>
 
-      <div className="flex flex-col gap-16 md:gap-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
         {PORTFOLIO_DATA.education.map((edu, idx) => (
-          <div key={idx} className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 border-b border-[var(--color-border)] pb-16 last:border-0 last:pb-0">
+          <div key={idx} className="flex flex-col h-full border border-[var(--color-border)] bg-[var(--background)] p-6 md:p-8 hover:border-[var(--color-accent)] transition-colors group">
             
-            <div className="md:col-span-4 flex flex-col gap-2">
-              <div className="text-xs font-mono tracking-widest text-[var(--color-accent)] uppercase">
-                {edu.date}
-              </div>
-              <div className="text-lg font-mono tracking-widest text-[var(--foreground)] uppercase mt-2">
-                {edu.cgpa}
+            <div className="flex flex-col gap-2 mb-6">
+              <div className="flex justify-between items-start">
+                <span className="text-xs font-mono tracking-widest text-[var(--color-accent)] uppercase">
+                  {edu.date}
+                </span>
+                <span className="text-xs font-mono tracking-widest text-[var(--foreground)] uppercase bg-[var(--foreground)]/5 px-2 py-1">
+                  {edu.cgpa}
+                </span>
               </div>
             </div>
 
-            <div className="md:col-span-8 flex flex-col gap-4">
-              <h4 className="text-2xl md:text-3xl font-medium tracking-tight uppercase leading-[1.2] text-[var(--foreground)]">
-                {edu.degree}
-              </h4>
-              <div className="text-xl text-[var(--foreground)] font-light">
-                {edu.university}
-              </div>
-              <p className="text-base md:text-lg text-[var(--color-muted)] font-light leading-relaxed mt-2">
-                {edu.description}
-              </p>
-
-              {edu.details && edu.details.length > 0 && (
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {edu.details.map((detail, dIdx) => (
-                    <span key={dIdx} className="text-xs font-mono tracking-widest text-[var(--color-muted)] uppercase border border-[var(--color-border)] px-3 py-1.5 rounded-sm">
-                      {detail}
-                    </span>
-                  ))}
-                </div>
-              )}
+            <h4 className="text-xl md:text-2xl font-medium tracking-tight uppercase leading-[1.2] text-[var(--foreground)] mb-3 group-hover:text-[var(--color-accent)] transition-colors">
+              {edu.degree}
+            </h4>
+            
+            <div className="text-sm font-mono text-[var(--foreground)] uppercase mb-4 opacity-80">
+              {edu.university}
             </div>
+            
+            <p className="text-sm md:text-base text-[var(--color-muted)] font-light leading-relaxed flex-grow">
+              {edu.description}
+            </p>
 
+            {edu.details && edu.details.length > 0 && (
+              <div className="mt-8 flex flex-wrap gap-2 pt-6 border-t border-[var(--color-border)]/50">
+                {edu.details.map((detail, dIdx) => (
+                  <span key={dIdx} className="text-[10px] md:text-xs font-mono tracking-widest text-[var(--color-muted)] uppercase border border-[var(--color-border)] px-2 py-1 rounded-sm">
+                    {detail}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
