@@ -12,7 +12,7 @@ export const PORTFOLIO_DATA = {
     shortBio: "I explore efficient digital hardware architectures through RTL design, FPGA implementation, and VLSI-oriented research.",
     secondBio: "My work spans digital IC design, computer arithmetic, approximate computing, FPGA-based systems, and mixed-signal IC design.",
     aboutHeading: "ABOUT ME",
-    aboutBody: "My interest in electronics began with fundamental logic and quickly evolved toward digital hardware design, RTL architectures, FPGA implementation, and VLSI.\n\nI explore Verilog-based RTL design, arithmetic architectures, and the trade-offs between hardware complexity, performance, and precision. This has led me to projects involving floating-point FMA architectures, approximate computing, and mixed-signal IC design.\n\nUltimately, my goal is to pursue graduate study in VLSI, digital IC design, and hardware-efficient computing."
+    aboutBody: "My interest in electronics began with fundamental logic and quickly evolved toward digital hardware design, RTL architectures, FPGA implementation, and VLSI.\n\nI explore Verilog-based RTL design, arithmetic architectures, and the trade-offs between hardware complexity, performance, and precision. This has led me to projects involving floating-point FMA architectures, approximate computing, and mixed-signal IC design.\n\nUltimately, my goal is to pursue a Master's degree in VLSI, digital IC design, and hardware-efficient computing."
   },
   stats: [
     { value: "VLSI & FPGA", label: "Primary Technical Focus" },
@@ -298,7 +298,7 @@ export const PORTFOLIO_DATA = {
     "FPGA Computing",
     "EDA & Optimization"
   ],
-  careerPathDesc: "My undergraduate projects have progressively moved from digital logic and embedded systems toward RTL architectures, arithmetic hardware, FPGA implementation, and VLSI-oriented design.\n\nThrough projects such as the configurable floating-point FMA, approximate multiplier, and 12-bit DAC, I have developed an interest in understanding how hardware architectures can be designed for improved performance, reduced resource utilization, and efficient computation.\n\nMy research internship in terahertz metamaterial-based sensing further introduced me to simulation-driven research, technical analysis, and structured problem-solving.\n\nI now aim to deepen this foundation through graduate study, with particular interest in VLSI, digital IC design, computer arithmetic, approximate computing, FPGA-based hardware, and EDA methodologies.",
+  careerPathDesc: "My undergraduate projects have progressively moved from digital logic and embedded systems toward RTL architectures, arithmetic hardware, FPGA implementation, and VLSI-oriented design.\n\nThrough projects such as the configurable floating-point FMA, approximate multiplier, and 12-bit DAC, I have developed an interest in understanding how hardware architectures can be designed for improved performance, reduced resource utilization, and efficient computation.\n\nMy research internship in terahertz metamaterial-based sensing further introduced me to simulation-driven research, technical analysis, and structured problem-solving.\n\nI now aim to deepen this foundation through a Master's degree, with particular interest in VLSI, digital IC design, computer arithmetic, approximate computing, FPGA-based hardware, and EDA methodologies.",
   extracurricular: [
     {
       title: "NBC — NIST BASKETBALL CLUB",
