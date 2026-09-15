@@ -12,18 +12,25 @@ export function ResearchInterests() {
         </h3>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="flex flex-col border-t border-[var(--color-border)]">
         {PORTFOLIO_DATA.researchInterests.map((interest, idx) => (
-          <div key={idx} className="flex flex-col p-8 border border-[var(--color-border)] bg-[var(--background)] hover:border-[var(--foreground)] transition-colors duration-300">
-            <div className="text-xs font-mono tracking-widest text-[var(--color-muted)] uppercase mb-6">
-              0{idx + 1}
+          <div 
+            key={idx} 
+            className="group flex flex-col md:flex-row py-8 md:py-12 border-b border-[var(--color-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors duration-500 px-4 md:px-8 -mx-4 md:-mx-8 cursor-default"
+          >
+            <div className="md:w-1/3 flex flex-col justify-between mb-4 md:mb-0 pr-4">
+              <span className="text-xs font-mono tracking-widest uppercase text-[var(--color-accent)] group-hover:text-[var(--background)] opacity-80 mb-4 md:mb-12">
+                0{idx + 1} //
+              </span>
+              <h4 className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight uppercase leading-[1.1]">
+                {interest.title}
+              </h4>
             </div>
-            <h4 className="text-xl md:text-2xl font-medium tracking-tight uppercase leading-[1.3] mb-4 text-[var(--foreground)]">
-              {interest.title}
-            </h4>
-            <p className="text-base text-[var(--color-muted)] font-light leading-relaxed">
-              {interest.description}
-            </p>
+            <div className="md:w-2/3 md:pl-12 flex items-end">
+              <p className="text-base md:text-lg font-light leading-relaxed text-[var(--color-muted)] group-hover:text-[var(--background)] group-hover:opacity-90 transition-colors duration-500">
+                {interest.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>
