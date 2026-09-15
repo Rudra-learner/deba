@@ -9,7 +9,6 @@ import { Projects } from "@/components/ui/Projects";
 import { Skills } from "@/components/ui/Skills";
 import { Experience } from "@/components/ui/Experience";
 import { Education } from "@/components/ui/Education";
-import { Courses } from "@/components/ui/Courses";
 import { Extracurricular } from "@/components/ui/Extracurricular";
 import { Contact } from "@/components/ui/Contact";
 import { Footer } from "@/components/ui/Footer";
@@ -48,7 +47,6 @@ export default function Home() {
         <Projects />
         <Experience />
         <Skills />
-        <Courses />
         <Education />
         <Extracurricular />
         <Contact />

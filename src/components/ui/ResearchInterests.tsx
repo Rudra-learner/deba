@@ -18,7 +18,7 @@ export function ResearchInterests() {
             <div className="text-xs font-mono tracking-widest text-[var(--color-accent)] uppercase mb-6 opacity-70 group-hover:opacity-100 transition-opacity">
               0{idx + 1}
             </div>
-            <h4 className="text-xl md:text-2xl font-medium tracking-tight uppercase leading-[1.3] text-[var(--foreground)] group-hover:text-[var(--color-accent)] transition-colors">
+            <h4 className="text-lg md:text-xl font-medium tracking-tight uppercase leading-[1.3] text-[var(--foreground)] group-hover:text-[var(--color-accent)] transition-colors">
               {interest.title}
             </h4>
           </div>

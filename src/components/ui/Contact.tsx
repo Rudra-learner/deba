@@ -38,7 +38,7 @@ export function Contact() {
           </div>
           <p className="text-lg text-[var(--color-muted)] font-light leading-relaxed max-w-md">
             Interested in my work, projects, or academic journey?<br/><br/>
-            I am currently pursuing my Bachelor&apos;s degree in Electronics & Communication Engineering and preparing for graduate study in VLSI and digital hardware design.
+            I am currently pursuing my Bachelor&apos;s degree in Electronics & Communication Engineering and preparing for a Master's degree in VLSI and digital hardware design.
           </p>
           
           <div className="flex flex-col gap-4 mt-4">
