@@ -307,6 +307,23 @@ export const PORTFOLIO_DATA = {
     "EDA & Optimization"
   ],
   careerPathDesc: "My undergraduate projects have progressively moved from digital logic and embedded systems toward RTL architectures, arithmetic hardware, FPGA implementation, and VLSI-oriented design.\n\nThrough projects such as the configurable floating-point FMA, approximate multiplier, and 12-bit DAC, I have developed an interest in understanding how hardware architectures can be designed for improved performance, reduced resource utilization, and efficient computation.\n\nMy research internship in terahertz metamaterial-based sensing further introduced me to simulation-driven research, technical analysis, and structured problem-solving.\n\nI now aim to deepen this foundation through a Master's degree, with particular interest in VLSI, digital IC design, computer arithmetic, approximate computing, FPGA-based hardware, and EDA methodologies.",
+  workshops: [
+    {
+      title: "Tech Spark– IoT Workshop",
+      date: "18–19 September 2026",
+      description: "Organized a two-day hands-on IoT workshop through the Renewable Energy Club, focusing on practical applications of IoT, sensors, and embedded technologies.",
+    },
+    {
+      title: "SensoTech– Hands-on Electronics Workshop",
+      date: "11–12 April 2025",
+      description: "Organized a two-day hands-on workshop through the Renewable Energy Club covering sensors, microcontrollers, project building, and practical applications of electronics.",
+    },
+    {
+      title: "Tinker to Tech– Project Building Workshop",
+      date: "26–27 August 2024",
+      description: "Participated in a two-day hands-on workshop organized by the Renewable Energy Club in collaboration with the IEEE Student Branch, NIST University, covering sensors, microcontrollers, and basic electronics project development.",
+    }
+  ],
   extracurricular: [
     {
       title: "NBC — NIST BASKETBALL CLUB",
