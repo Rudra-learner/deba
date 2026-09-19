@@ -8,7 +8,7 @@ export const PORTFOLIO_DATA = {
     email: "debabratasahu05112003@gmail.com",
     linkedin: "https://www.linkedin.com/in/debabrata-sahu-05ad112003/",
     github: "[YOUR GITHUB]",
-    resume: "/Resume.pdf",
+    resume: "/debabrata_cv.pdf",
     shortBio: "I explore efficient digital hardware architectures through RTL design, FPGA implementation, and VLSI-oriented research.",
     secondBio: "My work spans digital IC design, computer arithmetic, approximate computing, FPGA-based systems, and mixed-signal IC design.",
     aboutHeading: "ABOUT ME",
