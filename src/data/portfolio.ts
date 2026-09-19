@@ -186,6 +186,14 @@ export const PORTFOLIO_DATA = {
       ]
     },
     {
+      title: "GETTING STARTED WITH ARTIFICIAL INTELLIGENCE",
+      project: "IBM SkillsBuild",
+      date: "27 February 2026",
+      image: "",
+      description: "Completed introductory training in artificial intelligence concepts and applications through IBM SkillsBuild.",
+      details: []
+    },
+    {
       title: "ELECTRONICS & TELECOMMUNICATION INTERN — CENTRAL COALFIELDS LIMITED",
       project: "Smart Greenhouse Monitoring System | Ranchi, Jharkhand",
       date: "01 June 2025 – 30 June 2025",
