@@ -12,7 +12,7 @@ export function Experience() {
       <div className="mb-12 max-w-4xl flex items-end justify-between">
         <div>
           <h3 className="text-3xl md:text-5xl font-medium tracking-tight uppercase leading-[1.2]">
-            RESEARCH & INTERNSHIP EXPERIENCE
+            INTERNSHIP AND TRAINING
           </h3>
         </div>
       </div>
